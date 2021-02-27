@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Class_09 || Javascript </title>
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+
+
+    <div class="button_section">
+        <h2 id="heading"></h2>
+        <button type="button" onclick=" birthday()"> Click here</button>
+
+    </div>
+
+    <div class="calculator_section">
+        <h1> ...You can calculate here...</h1>
+
+        <input type="text" id="display">
+        
+        <button type="button" onclick="one()"> 1 </button>
+        <button type="button" onclick="two()"> 2 </button>
+        <button type="button" onclick="three()"> 3 </button>
+        <button type="button" onclick="four()"> 4 </button>
+        <button type="button" onclick="five()"> 5 </button>
+        <button type="button" onclick="six()"> 6 </button>
+        <button type="button" onclick="seven()"> 7 </button>
+        <button type="button" onclick="eight()"> 8 </button>
+        <button type="button" onclick="nine()"> 9 </button>
+        <button type="button" onclick="zero()"> 0 </button>
+        <button type="button" onclick="add()"> + </button>
+        <button type="button" onclick="sub()"> - </button>
+        <button type="button" onclick="mult()"> * </button>
+        <button type="button" onclick="dev()"> / </button>
+        <button type="button" onclick="clr()"> c </button>
+        <button type="button" onclick="equal()"> = </button>   
+
+    </div>
+
+    
+    <div class="result_section">
+        <h2> ..You can see your result here..</h2>
+        <input type="number" id="marks">
+        <button type="button" onclick="result()"> Your reslut</button>
+        <h1 id="result"></h1>
+    </div>
+
+    <div class="number_section">
+        <h1> ..You can count namta here..</h1>
+        <input type="number" id="look">
+        <button type="button" onclick="see()"> See here </button>
+        <h2 id="see"> </h2>
+    </div>
+
+
+
+    <script>
+   
+       var _Name = "Nabil Ahmed Maruf";
+       var _Occupation = "Student"; 
+       var _Background = "Science";
+       var _Nationality = "Bangladeshi";
+       var _Religion = "Islam";
+       var _Hobby = "Coding & listing song"
+       var _Other = "Student of Shikhbe Sbobai"
+       var _Address = "West Agargaon, Dhaka-1207";
+       var _Email = "mrna******@gmail.com";
+       var _Phone = "0199*****130";
+       var info = "Name: " + _Name + "<br>" + "Occupation: " + _Occupation + "<br>" + "Nationality: " + _Nationality + "<br>" + "Religion: " + _Religion + "<br>" + "Hobby: " + _Hobby + "<br>" + "Other: " + _Other + "<br>" +  "Addr: " +_Address + "<br>" + "Email: "     +_Email + "<br>" + "Phone: " + _Phone
+
+        
+
+        function birthday(){
+            document.getElementById("heading").innerHTML =  info;
+        }
+        
+
+
+        var Show = document.getElementById("display");
+        
+
+        function one(){
+            Show.value += 1;
+        }
+        function two(){
+            Show.value += 2;
+        }
+        function three(){
+            Show.value += 3;
+        }
+        function four(){
+            Show.value += 4;
+        }
+        function five(){
+            Show.value += 5;
+        }
+        function six(){
+            Show.value += 6;
+        }
+        function seven(){
+            Show.value += 7;
+        }
+        function eight(){
+            Show.value +=8;
+        }
+        function nine(){
+            Show.value += 9;
+        }
+        function zero(){
+            Show.value += 0;
+        }
+        function add(){
+            Show.value += '+';
+        }
+        function sub(){
+            Show.value += '-';
+        }
+        function mult(){
+            Show.value += '*';
+        }
+        function dev(){
+            Show.value += '/';
+        }
+        function clr(){
+            Show.value = '';
+        }
+        function equal(){
+            Show.value = eval(Show.value);
+        }
+
+
+    
+      
+
+        function result(){ 
+            var marks = document.getElementById("marks").value; 
+
+            if(marks > 100){
+            document.getElementById("result").innerHTML = "Please Enter a valid number"
+        } else if(marks >= 80){
+            document.getElementById("result").innerHTML = "You got A+"
+        } else if(marks >= 70) {
+            document.getElementById("result").innerHTML = "You got A"
+        } else if(marks >= 60){
+            document.getElementById("result").innerHTML = "You got A-"
+        } else if(marks >= 50){
+            document.getElementById("result").innerHTML = "You got B"
+        } else if(marks >= 40){
+            document.getElementById("result").innerHTML = "You got C"
+        } else if(marks >= 33){
+            document.getElementById("result").innerHTML = "You got D"
+        } else{
+            document.getElementById("result").innerHTML = "You got F"
+        }
+
+        }
+
+
+
+        var a = 10;
+        var i = 1;
+       
+        var b = null;
+
+        function see(){
+            var c = document.getElementById("look").value;
+
+            for( i ; a >= i ; i++ ){
+           
+             b = b + i + "x" + c + "=" + i*c + "<br>";
+
+            document.getElementById("see").innerHTML = b;
+        }
+
+        }
+
+
+    </script>
+    
+</body>
+</html>
